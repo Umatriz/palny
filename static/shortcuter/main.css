@@ -1,0 +1,44 @@
+.Header {
+  height: 100vh;
+}
+.HeaderContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.Text {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  justify-content: start;
+  grid-gap: 0.5em;
+}
+
+.Add {
+  height: 100vh;
+}
+.AddContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+.AddForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5em;
+}
+.Input {
+  border: none;
+  outline: none;
+  color: #010101;
+  font-size: 1.2em;
+  padding: 15px;
+  border: 2px solid #B1D0E0;
+  border-radius: 5px;
+}

@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+[class*="Container"] {
+  max-width: 1500px;
+  margin: 0px auto;
+}
+
+.Title-1 {
+  font-size: 5em;
+  color: #010101;
+}
+.Title-2 {
+  font-size: 4em;
+  color: #010101;
+}
+.Title-3 {
+  font-size: 3em;
+  color: #010101;
+}
+.Title-4 {
+  font-size: 2em;
+  color: #010101;
+}
+.Title-5 {
+  font-size: 1.5em;
+  color: #010101;
+}
+.Content {
+  /* margin-top: 3.125em; */
+}
+
+.NavBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 93.75em;
+  height: 3.125em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3px 0;
+}
+.NavItem:not(:last-child) {
+  margin-right: 5px;
+}
+.NavList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  border-radius: 3px;
+}
+.NavLink {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #6998AB;
+  position: relative;
+  border-radius: 3px;
+  z-index: 1;
+  font-size: 1.2em;
+  transition: 0.3s ease-in-out;
+}
+.NavLink::before  {
+  content: "";
+  height: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #6998AB;
+  transition: 0.3s ease-in-out;
+  border-radius: 3px;
+  z-index: 0;
+}
+.NavLink:hover::before {
+  height: 100%;
+}
+.NavLink:hover {
+  color: #fff;
+}
+.NavIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.NavIcon:not(:last-child) {
+  margin-right: 3px;
+}
+.NavTitle {
+  position: relative;
+  z-index: 1;
+}
+
+.BtnFlexCont {
+  display: flex;
+}
+.Btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #6998AB;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 3px;
+  transition: 0.3s ease-in-out;
+}
+.Btn:hover {
+  background-color: #406882;
+  color: #fff;
+}
+.Btn .Icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Palny{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'shortcuter/main.css' %}">
+{% endblock %}
+
+{% block content %}
+  <section class="Header">
+    <div class="HeaderContainer">
+      <img src="{% static 'shortcuter/img/HeaderImage.svg' %}" alt="" class="Image">
+      <div class="Text">
+        <span class="Title-1">Palny</span>
+        <span class="Title-4">Manage your urls easier!</span>
+        <p class="Text"></p>
+        <div class="BtnFlexCont">
+          <a href="" class="Btn">
+            <span class="Icon"></span>
+            <span class="Text">Get started</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

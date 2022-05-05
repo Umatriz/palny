@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Palny{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'shortcuter/main.css' %}">
+{% endblock %}
+
+{% block content %}
+  <section class="Add">
+    <div class="AddContainer">
+      <form class="AddForm" method="post">
+        {% csrf_token %}
+        <input type="text" name="" placeholder="Enter you url" class="Input">
+        <button type="submit" class="Btn">Сut!</button>
+      </form>
+    </div>
+  </section>
+{% endblock %}
