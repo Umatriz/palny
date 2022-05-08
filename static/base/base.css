@@ -108,6 +108,10 @@
 .BtnFlexCont {
   display: flex;
 }
+.BtnFlexCont-m {
+  display: flex;
+  gap: 5px;
+}
 .Btn {
   outline: none;
   border: none;

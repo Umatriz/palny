@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Create an account{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'shortcuter/main.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="Add">
+  <div class="AddContainer">
+    <span class="Title-3">Welcome!</span>
+    <p class="Text-mb">Please, sign up using the following form:</p>
+    <form method="post" class="AddForm">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username" class="Input">
+        <input type="password" name="password" placeholder="Password" class="Input">
+        <input type="password" name="password2" placeholder="Password again" class="Input">
+        <button type="submit" class="Btn">Sign up!</button>
+    </form>
+  </div>
+</section>
+{% endblock %}

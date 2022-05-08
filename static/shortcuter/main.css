@@ -42,3 +42,11 @@
   border: 2px solid #B1D0E0;
   border-radius: 5px;
 }
+.Text-mb {
+  margin-bottom: 10px;
+}
+
+.errorlist {
+  list-style: none;
+
+}

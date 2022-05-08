@@ -13,6 +13,7 @@
         {% csrf_token %}
         <input type="text" name="sourse_link" placeholder="Enter you url" class="Input">
         <input type="text" name="url" placeholder="Enter you custom slug" class="Input">
+        {{ form.errors }}
         <button type="submit" class="Btn">Сut!</button>
       </form>
     </div>

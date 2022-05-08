@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Sign in{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'shortcuter/main.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<span class="Title-1">Logged out!</span>
+<a href="{% url 'login'%}">Click here to login again.</a>
+
+{% endblock %}

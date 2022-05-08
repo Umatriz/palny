@@ -13,4 +13,26 @@
       </a>
     </li>
   </ul>
+  {% if user.is_authenticated %}
+  <div class="BtnFlexCont-m">
+    <span class="Title-5">User: {{ user.get_username }}</span>
+    <a href="{% url 'logout' %}" class="Btn">
+      <span class="Icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+      <span class="BtnText">Logout</span>
+    </a>
+  </div>
+  {% else %}
+  <div class="BtnFlexCont-m">
+    <a href="{% url 'register' %}" class="Btn">
+      <span class="Icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+      <span class="BtnText">Sign up</span>
+    </a>
+    <a href="{% url 'login' %}" class="Btn">
+      <span class="Icon">
+        <ion-icon name="log-in-outline"></ion-icon>
+      </span>
+      <span class="BtnText">Sign in</span>
+    </a>
+  </div>
+  {% endif %}
 </nav>
