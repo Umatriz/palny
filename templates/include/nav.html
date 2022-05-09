@@ -15,11 +15,17 @@
   </ul>
   {% if user.is_authenticated %}
   <div class="BtnFlexCont-m">
-    <span class="Title-5">User: {{ user.get_username }}</span>
-    <a href="{% url 'logout' %}" class="Btn">
-      <span class="Icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-      <span class="BtnText">Logout</span>
-    </a>
+    <span class="Title-5">{{ user.get_username }}</span>
+    <div class="BtnFlexCont-m">
+      <a href="{% url 'profile' %}" class="Btn">
+        <span class="Icon"><ion-icon name="person-outline"></ion-icon></span>
+        <span class="BtnText">Profile</span>
+      </a>
+      <a href="{% url 'logout' %}" class="Btn">
+        <span class="Icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+        <span class="BtnText">Logout</span>
+      </a>
+    </div>
   </div>
   {% else %}
   <div class="BtnFlexCont-m">

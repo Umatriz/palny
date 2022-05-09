@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Palny{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'shortcuter/main.css' %}">
+{% endblock %}
+
+{% block content %}
+  <section class="Profile">
+    <div class="ProfileContainer">
+      {% for link in links %}
+        <div>
+          {{ link.sourse_link }}
+          {{ link.url }}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}
