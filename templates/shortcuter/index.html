@@ -15,10 +15,17 @@
         <span class="Title-4">Manage your urls easier!</span>
         <p class="Text"></p>
         <div class="BtnFlexCont">
-          <a href="" class="Btn">
-            <span class="Icon"></span>
-            <span class="Text">Get started</span>
-          </a>
+          {% if user.is_authenticated %}
+            <a href="{% url 'profile' %}" class="Btn">
+              <span class="Icon"></span>
+              <span class="Text">Get started</span>
+            </a>
+          {% else %}
+            <a href="{% url 'register' %}" class="Btn">
+              <span class="Icon"></span>
+              <span class="Text">Get started</span>
+            </a>
+          {% endif %}
         </div>
       </div>
     </div>

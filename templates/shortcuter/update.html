@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Palny{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'shortcuter/main.css' %}">
+{% endblock %}
+
+{% block content %}
+  <section class="Add">
+    <div class="AddContainer">
+      <form class="AddForm" method="post">
+        {% csrf_token %}
+        <input type="text" value="{{ link.sourse_link }}" name="sourse_link" placeholder="Enter you url" class="Input">
+        <input type="text" value="{{ link.url }}" name="url" placeholder="Enter you custom slug" class="Input">
+        {{ form.errors }}
+        <button type="submit" class="Btn">Update</button>
+      </form>
+    </div>
+  </section>
+{% endblock %}

@@ -48,5 +48,32 @@
 
 .errorlist {
   list-style: none;
+}
 
+.ProfileContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.7em;
+}
+.LinkCard {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 1em;
+  background-color: #FFF;
+  border-radius: 5px;
+  box-shadow: 10px 10px 20px rgb(105, 152, 171, 0.5);
+  line-height: 1.5;
+}
+.SourseLink {
+  font-size: 1.1rem;
+}
+.SourseLink span {
+  background-color: #B1D0E0;
+  padding: 0.1em;
+  border-radius: 3px;
 }

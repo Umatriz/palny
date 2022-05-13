@@ -11,6 +11,11 @@
   margin: 0px auto;
 }
 
+
+body {
+  background-color: #F9F9F9;
+}
+
 .Title-1 {
   font-size: 5em;
   color: #010101;
@@ -136,4 +141,22 @@
   align-items: center;
   justify-content: center;
   font-size: 1.2em;
+}
+
+.FlexCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.IconLink {
+  font-size: 1.5em;
+  color: #1A374D;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+.IconLink:hover {
+  color: #6998AB;
 }

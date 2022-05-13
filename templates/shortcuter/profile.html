@@ -10,11 +10,51 @@
   <section class="Profile">
     <div class="ProfileContainer">
       {% for link in links %}
-        <div>
-          {{ link.sourse_link }}
-          {{ link.url }}
+        <div class="LinkCard">
+          <div class="FlexCard">
+            <a href="{{ link.get_absolute_edit }}" class="IconLink">
+              <ion-icon name="create-outline"></ion-icon>
+            </a>
+            <a href="{{ link.get_absolute_delete }}" class="IconLink">
+              <ion-icon name="trash-outline"></ion-icon>
+            </a>
+          </div>
+          <span class="SourseLink">
+            Sourse link:
+            <span>{{ link.sourse_link }}</span>
+          </span>
+          <span class="SourseLink">
+            Custom slug:
+            <span>{{ link.url }}</span>
+          </span>
+          <div>
+            <span class="SourseLink">
+              Shortened link:
+              <span id="item-to-copy">{{ full_link }}{{ link.get_user_link }}</span>
+            </span>
+          </div>
+          <button onclick="copyToClipboard()" class="Btn">
+            <span class="BtnText">Copy</span>
+          </button>
         </div>
       {% endfor %}
     </div>
   </section>
+{% endblock %}
+
+{% block script %}
+  <script>
+    function copyToClipboard() {
+    const str = document.getElementById('item-to-copy').innerText;
+    const el = document.createElement('textarea');
+    el.value = str;
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+}
+  </script>
 {% endblock %}
