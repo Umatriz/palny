@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 
 
 class Link(models.Model):
-    """docstring for Link."""
 
     author = models.ForeignKey(User, on_delete = models.CASCADE, null = True, blank = True)
     sourse_link = models.URLField('link', max_length = 550)

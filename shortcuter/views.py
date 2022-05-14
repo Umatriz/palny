@@ -21,9 +21,9 @@ def add_url(request):
             form = form.save(commit = False)
             form.author = request.user
             form.save()
-        return render(request, 'shortcuter/add.html', {'form': form})
-    else:
-        return redirect('login')
+            return render(request, 'shortcuter/add.html', {'form': form})
+        else:
+            return redirect('login')
 
 def links_list(request):
     links = models.Link.objects.filter(author = request.user)
