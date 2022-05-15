@@ -10,20 +10,22 @@ from . import forms
 def main(request):
     return render(request, 'shortcuter/index.html')
 
-def short(self, request, slug, pk):
+def short(request, slug, pk):
     link = models.Link.objects.get(author = pk, url = slug)
+    link.views = link.views + 1
+    link.save()
     return redirect(link)
 
 def add_url(request):
-    form = forms.LinkForm(request.POST)
+    form = forms.LinkForm(request.POST or None)
     if request.user.is_authenticated:
         if form.is_valid():
             form = form.save(commit = False)
             form.author = request.user
             form.save()
-            return render(request, 'shortcuter/add.html', {'form': form})
-        else:
-            return redirect('login')
+        return render(request, 'shortcuter/add.html', {'form': form})
+    else:
+        return redirect('login')
 
 def links_list(request):
     links = models.Link.objects.filter(author = request.user)
@@ -51,5 +53,4 @@ def update_link(request, pk):
 def delete_link(request, pk):
     link = models.Link.objects.filter(author = request.user, id = pk).first()
     link.delete()
-
     return redirect('profile')

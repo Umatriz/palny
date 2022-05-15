@@ -8,4 +8,6 @@ class LinkForm(forms.ModelForm):
     class Meta:
         model = models.Link
         fields = ('sourse_link', 'url', 'author')
-        widgets = {'author': forms.HiddenInput()}
+        widgets = {
+            'author': forms.HiddenInput(),
+        }

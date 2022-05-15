@@ -1,20 +1,20 @@
 # Palny
 
 Использовались:
-- Django 4.0
+- [Django](https://www.djangoproject.com/)
+- [Pipenv](https://pypi.org/project/pipenv/)
 
 ## Локальный запуск
 ```
 $ git clone https://github.com/Umatriz/palny.git
 $ cd palny
-$ python -m venv venv
-$ venv\Scripts\activate
-$ pip install -r requirements.txt
+$ pipenv shell
+$ pipenv install --ignore-pipfile
+$ python manage.py migrate
 ```
 
 ## ToDo
 - ~~Профиль пользователя~~ Сделано
 - ~~Редактирование/удаление ссылки~~ Сделано
-- Выводить в профиле количество переходов по ссылке
+- ~~Выводить в профиле количество переходов по ссылке~~ Сделано
 - API
-- Нормальное отображение ошибки *UNIQUE constraint failed*

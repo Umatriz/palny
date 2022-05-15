@@ -5,9 +5,10 @@ from django.contrib.auth.models import User
 
 class Link(models.Model):
 
-    author = models.ForeignKey(User, on_delete = models.CASCADE, null = True, blank = True)
     sourse_link = models.URLField('link', max_length = 550)
+    views = models.PositiveIntegerField('views', default = 0)
     url = models.SlugField('slug')
+    author = models.ForeignKey(User, on_delete = models.CASCADE, null = True, blank = True)
 
     class Meta:
         unique_together = ('author', 'url')
