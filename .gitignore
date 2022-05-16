@@ -1,5 +1,5 @@
-admin.txt
-palny/local_settings.py
+admin.yaml
+config.yaml
 
 # Django #
 *.log
